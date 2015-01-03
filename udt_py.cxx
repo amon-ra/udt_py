@@ -1320,7 +1320,7 @@ PY_TRY_CXX
 
     {
         AutoGILCallOut g;
-        if(UDT::epoll_wait(eid, &r_usock_out, &w_usock_out, timeout, &r_ssock_out, &w_ssock_out) < 0)
+        if(UDT::epoll_wait(eid, &r_usock_out, &w_usock_out, timeout) < 0)
         {
             throw py_udt_error();
         }
@@ -1470,7 +1470,7 @@ PY_TRY_CXX
     std::set<SYSSOCKET> e_ssock_out;
 
     AutoGILCallOut g;
-    res = UDT::epoll_wait(eid, &r_usock_out, &w_usock_out, &e_usock_out, timeout, &r_ssock_out, &w_ssock_out, &e_ssock_out);
+    res = UDT::epoll_wait(eid, &r_usock_out, &w_usock_out, timeout);
 
     // {
     //     AutoGILCallOut g;

@@ -1,7 +1,7 @@
 from distutils.core import setup, Extension
 import os
 
-udt_dir = os.path.join(os.path.dirname(__file__),'..', 'udt', 'udt4', 'src')
+udt_dir = os.path.join(os.path.dirname(__file__),'..', 'udt-git', 'udt4', 'src')
 
 module = Extension(
     '_udt',
@@ -13,7 +13,7 @@ module = Extension(
 
 setup(
     name='udt_py',
-    version='1.0',
+    version='1.0.1',
     description='Python bindings for UDT',
     ext_modules=[module],
     py_modules=['udt']
